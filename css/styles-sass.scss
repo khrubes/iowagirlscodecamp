@@ -1,0 +1,166 @@
+$font-family:   "Roboto";
+$font-size:     14px;
+
+$theme-pink: #EC79A4;
+$theme-orange: #FF9C65;
+$theme-blue: #89B9C7;
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+footer {
+    background-color: $theme-blue !important;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.container {
+    text-align: center;
+}
+
+.parallax-container, #index-banner {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+.section-heading{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: white;
+}
+
+#index-banner {
+  height : 100vh;
+  background-size: 200% 100% !important;
+  animation: move 10s ease infinite;
+  transform: translate3d(0, 0, 0);
+  background: linear-gradient(45deg, $theme-pink 10%, $theme-orange 90%);
+}
+
+#iowa-girls-code-camp, h1 {
+  -webkit-text-shadow: 2px 2px 2px gray;
+  -moz-text-shadow: 2px 2px 2px gray;
+  text-shadow: 2px 2px 2px gray;
+  color: white !important;
+  margin-bottom: 0;
+}
+
+#map-column {
+    padding: 0 0 0 0;
+}
+
+#map-container {
+}
+
+#map-container-wrapper, #schedule-container-wrapper {
+    background-color: $theme-pink;
+    height: 100vh !important;
+}
+
+#schedule-container-wrapper{
+    background-color: $theme-orange;
+}
+
+#map-row {
+    margin-bottom: 0px;
+}
+
+#register-button, {
+    background-color: $theme-blue !important;
+} 
+
+i {
+    color : $theme-blue !important;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+/* small only */
+@media only screen and (max-width: 600px) {
+    #map {
+        height: 300px;
+    }
+}
+
+/* medium and up */
+@media only screen and (min-width: 601px) {
+      #map {
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+@keyframes arrive {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 500px, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: 100% 0
+    }
+
+    100% {
+        background-position: 0 0
+    }
+}
