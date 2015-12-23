@@ -7,6 +7,7 @@ $theme-blue: #89B9C7;
 
 /* Mixins */
 @mixin vertical-align($position: relative) {
+
 }
 
 nav ul a,
@@ -103,7 +104,6 @@ span.title{
 #map-container-wrapper, #schedule-container-wrapper, #faq-container-wrapper, #sponsors-container-wrapper{
     background-color: $theme-pink;
     display: -webkit-box !important;
-    height: 100vh !important;
 }
 
 #faq-container-wrapper {
@@ -120,7 +120,14 @@ span.title{
 
 #index-banner {
   height : 100vh;
-  background-size: 200% 100% !important;
+
+  background: url(../techchicks1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  opacity: 0.2;
+}
+
+#gradient-section {
   animation: move 10s ease infinite;
   transform: translate3d(0, 0, 0);
   background: linear-gradient(45deg, $theme-pink 10%, $theme-orange 90%);
@@ -143,7 +150,6 @@ span.title{
 
 #schedule-container-wrapper{
     background-color: $theme-orange;
-    height: 120% !important;
 }
 
 #map-row {
@@ -186,9 +192,6 @@ footer.page-footer {
 @media only screen and (max-width: 600px) {
     #map {
         height: 300px;
-    }
-    .collection {
-        display: none;
     }
 }
 

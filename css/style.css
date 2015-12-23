@@ -71,8 +71,7 @@ span.title {
 
 #map-container-wrapper, #schedule-container-wrapper, #faq-container-wrapper, #sponsors-container-wrapper {
   background-color: #EC79A4;
-  display: -webkit-box !important;
-  height: 100vh !important; }
+  display: -webkit-box !important; }
 
 #faq-container-wrapper {
   background-color: white; }
@@ -85,7 +84,12 @@ span.title {
 
 #index-banner {
   height: 100vh;
-  background-size: 200% 100% !important;
+  background: url(../techchicks1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  opacity: 0.2; }
+
+#gradient-section {
   animation: move 10s ease infinite;
   transform: translate3d(0, 0, 0);
   background: linear-gradient(45deg, #EC79A4 10%, #FF9C65 90%); }
@@ -101,8 +105,7 @@ span.title {
   padding: 0 0 0 0; }
 
 #schedule-container-wrapper {
-  background-color: #FF9C65;
-  height: 120% !important; }
+  background-color: #FF9C65; }
 
 #map-row {
   margin-bottom: 0px; }
@@ -133,10 +136,7 @@ footer.page-footer {
 /* small only */
 @media only screen and (max-width: 600px) {
   #map {
-    height: 300px; }
-
-  .collection {
-    display: none; } }
+    height: 300px; } }
 /* medium and up */
 @media only screen and (min-width: 601px) {
   #map {
