@@ -1,3 +1,4 @@
+/* Mixins */
 nav ul a,
 nav .brand-logo {
   color: #444; }
@@ -40,22 +41,19 @@ p {
   .section-heading h1 {
     margin-top: 0px; }
 
+.section {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 #map-container-wrapper, #schedule-container-wrapper, #faq-container-wrapper {
   background-color: #EC79A4;
   height: 100vh !important; }
 
 #faq-container-wrapper {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fffcfc+0,ffffff+5,ffffff+35,ffffff+78,ec79a4+100 */
-  background: #fffcfc;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #fffcfc 0%, white 5%, white 35%, white 78%, #ec79a4 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fffcfc 0%, white 5%, white 35%, white 78%, #ec79a4 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fffcfc 0%, white 5%, white 35%, white 78%, #ec79a4 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcfc', endColorstr='#ec79a4',GradientType=0 );
-  /* IE6-9 */ }
+  background-color: white; }
 
 #index-banner {
   height: 100vh;
@@ -102,6 +100,7 @@ footer.page-footer {
 
   #index-banner .section {
     top: 10%; } }
+/* Media Queries */
 /* small only */
 @media only screen and (max-width: 600px) {
   #map {
@@ -113,6 +112,7 @@ footer.page-footer {
 @media only screen and (max-width: 600px) {
   #index-banner .section {
     top: 0; } }
+/* Animations */
 @keyframes arrive {
   0% {
     opacity: 0;
