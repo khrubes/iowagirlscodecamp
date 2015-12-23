@@ -7,11 +7,6 @@ $theme-blue: #89B9C7;
 
 /* Mixins */
 @mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 nav ul a,
@@ -25,6 +20,8 @@ nav .brand-logo {
     box-sizing: border-box;
 }
 
+html, body {width:100%;height:100%;margin:0;padding:0;}
+
 body {
     font-family: $font-family;
     font-size: $font-size;
@@ -34,16 +31,43 @@ footer {
     background-color: $theme-blue !important;
 }
 
+#schedule-container-wrapper > div > ul > li > p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
 p {
   line-height: 2rem;
+}
+
+span.title{
+    font-weight: 500;
+}
+
+.arrow-down-wrapper {
+    position: absolute; 
+    bottom: 15%;
+    text-align: center;
+    width: 100%;
 }
 
 .button-collapse {
   color: #26a69a;
 }
 
+.circle {
+    background-color: white !important;
+    font-size: 250% !important;
+    border-radius: 0% !important;
+}
+
 .container {
     text-align: center;
+}
+
+.iowa-girls-code-camp-section {
+    
 }
 
 .parallax-container, #index-banner {
@@ -72,13 +96,26 @@ p {
     @include vertical-align();
 }
 
-#map-container-wrapper, #schedule-container-wrapper, #faq-container-wrapper{
+#about-text, a.secondary-content {
+    color: $theme-blue !important;
+}
+
+#map-container-wrapper, #schedule-container-wrapper, #faq-container-wrapper, #sponsors-container-wrapper{
     background-color: $theme-pink;
+    display: -webkit-box !important;
     height: 100vh !important;
 }
 
 #faq-container-wrapper {
     background-color: white;
+}
+
+#sponsors-container-wrapper{
+    background-color: $theme-blue;
+}
+
+#code-camp-description {
+    font-weight: 300;
 }
 
 #index-banner {
@@ -89,7 +126,7 @@ p {
   background: linear-gradient(45deg, $theme-pink 10%, $theme-orange 90%);
 }
 
-#iowa-girls-code-camp, h1 {
+#iowa-girls-code-camp {
   -webkit-text-shadow: 2px 2px 2px gray;
   -moz-text-shadow: 2px 2px 2px gray;
   text-shadow: 2px 2px 2px gray;
@@ -106,6 +143,7 @@ p {
 
 #schedule-container-wrapper{
     background-color: $theme-orange;
+    height: 120% !important;
 }
 
 #map-row {
@@ -148,6 +186,9 @@ footer.page-footer {
 @media only screen and (max-width: 600px) {
     #map {
         height: 300px;
+    }
+    .collection {
+        display: none;
     }
 }
 
