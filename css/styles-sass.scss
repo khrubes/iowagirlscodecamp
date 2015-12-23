@@ -2,7 +2,9 @@ $font-family:   "Roboto";
 $font-size:     14px;
 
 $theme-pink: #EC79A4;
+$theme-pink-opacite: rgba(236, 121, 164, .7);
 $theme-orange: #FF9C65;
+$theme-orange-opacite: rgba(255, 156, 101, .7);
 $theme-blue: #89B9C7;
 
 /* Mixins */
@@ -120,17 +122,17 @@ span.title{
 
 #index-banner {
   height : 100vh;
-
   background: url(../techchicks1.jpg);
   background-repeat: no-repeat;
   background-size: cover !important;
-  opacity: 0.2;
+  opacity: 1;
 }
 
 #gradient-section {
+  height: 100vh;
   animation: move 10s ease infinite;
   transform: translate3d(0, 0, 0);
-  background: linear-gradient(45deg, $theme-pink 10%, $theme-orange 90%);
+  background: linear-gradient(45deg, $theme-pink-opacite 10%, $theme-orange-opacite 90%);
 }
 
 #iowa-girls-code-camp {
