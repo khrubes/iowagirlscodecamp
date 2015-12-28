@@ -2,9 +2,9 @@ $font-family:   "Roboto";
 $font-size:     14px;
 
 $theme-pink: #EC79A4;
-$theme-pink-opacite: rgba(236, 121, 164, .8);
+$theme-pink-opacite: rgba(236, 121, 164, .85);
 $theme-orange: #FF9C65;
-$theme-orange-opacite: rgba(255, 156, 101, .8);
+$theme-orange-opacite: rgba(255, 156, 101, .85);
 $theme-blue: #89B9C7;
 
 nav ul a,
@@ -77,6 +77,10 @@ span.title{
     z-index: 500;
 }
 
+.nav-wrapper {
+    width: 90%;
+}
+
 .parallax-container, #iowa-girls-code-camp-image {
   min-height: 380px;
   line-height: 0;
@@ -103,6 +107,7 @@ span.title{
     padding-top: 5%;
     padding-bottom: 5%;
 }
+
 
 #about-text, a.secondary-content {
     color: $theme-blue !important;
@@ -141,12 +146,18 @@ span.title{
   background: linear-gradient(45deg, $theme-pink-opacite 10%, $theme-orange-opacite 90%);
 }
 
+/* down arrow */
+#gradient-section > div.arrow-down-wrapper > i {
+    font-size: 400%;
+}
+
 #iowa-girls-code-camp {
   -webkit-text-shadow: 2px 2px 2px gray;
   -moz-text-shadow: 2px 2px 2px gray;
   text-shadow: 2px 2px 2px gray;
   color: white !important;
   margin-bottom: 0;
+  font-size: 600%;
 }
 
 #map-column {

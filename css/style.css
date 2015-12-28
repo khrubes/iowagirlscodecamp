@@ -54,6 +54,9 @@ span.title {
   top: 0 !important;
   z-index: 500; }
 
+.nav-wrapper {
+  width: 90%; }
+
 .parallax-container, #iowa-girls-code-camp-image {
   min-height: 380px;
   line-height: 0;
@@ -103,14 +106,19 @@ span.title {
   background-size: 200% 100% !important;
   animation: move 3s ease infinite;
   transform: translate3d(0, 0, 0);
-  background: linear-gradient(45deg, rgba(236, 121, 164, 0.8) 10%, rgba(255, 156, 101, 0.8) 90%); }
+  background: linear-gradient(45deg, rgba(236, 121, 164, 0.85) 10%, rgba(255, 156, 101, 0.85) 90%); }
+
+/* down arrow */
+#gradient-section > div.arrow-down-wrapper > i {
+  font-size: 400%; }
 
 #iowa-girls-code-camp {
   -webkit-text-shadow: 2px 2px 2px gray;
   -moz-text-shadow: 2px 2px 2px gray;
   text-shadow: 2px 2px 2px gray;
   color: white !important;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 600%; }
 
 #map-column {
   padding: 0 0 0 0; }
