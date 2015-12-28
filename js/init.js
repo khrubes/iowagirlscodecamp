@@ -25,10 +25,13 @@ var INITIAL_NAV_OFFSET = $("nav").offset().top;
    	if (scrollPos > INITIAL_NAV_OFFSET) {  			
    		if (!($("nav").hasClass("navbar-stuck-to-top")) ) {
    			$("nav").addClass("navbar-stuck-to-top");
+   			$("#about-text").css("padding-top","10%");
+
    		}
    	} else {
    		if ($("nav").hasClass("navbar-stuck-to-top")) {
    			$("nav").removeClass("navbar-stuck-to-top");
+   			$("#about-text").css("padding-top","5%");
    		}
    	}
 }

@@ -29,7 +29,9 @@ footer {
     background-color: $theme-blue !important;
 }
 
-#schedule-container-wrapper > div > ul > li > p{
+/* Nav bar link text on desktop */
+body > nav > div > ul.right.hide-on-med-and-down > li > a {
+    font-size: 120%;
 }
 
 p {
@@ -215,6 +217,10 @@ footer.page-footer {
     }
     #logo-container, body > nav > div > a.button-collapse > i{
         font-size: 150%;
+    }
+
+    .arrow-down-wrapper {
+        bottom: 7%;
     }
 }
 
