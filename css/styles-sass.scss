@@ -2,15 +2,10 @@ $font-family:   "Roboto";
 $font-size:     14px;
 
 $theme-pink: #EC79A4;
-$theme-pink-opacite: rgba(236, 121, 164, .7);
+$theme-pink-opacite: rgba(236, 121, 164, .8);
 $theme-orange: #FF9C65;
-$theme-orange-opacite: rgba(255, 156, 101, .7);
+$theme-orange-opacite: rgba(255, 156, 101, .8);
 $theme-blue: #89B9C7;
-
-/* Mixins */
-@mixin vertical-align($position: relative) {
-
-}
 
 nav ul a,
 nav .brand-logo {
@@ -70,10 +65,11 @@ span.title{
 }
 
 .iowa-girls-code-camp-section {
-    
+    position: relative;
+    top: 15%;
 }
 
-.parallax-container, #index-banner {
+.parallax-container, #iowa-girls-code-camp-image {
   min-height: 380px;
   line-height: 0;
   height: auto;
@@ -96,7 +92,8 @@ span.title{
 }
 
 .section {
-    @include vertical-align();
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 #about-text, a.secondary-content {
@@ -120,7 +117,7 @@ span.title{
     font-weight: 300;
 }
 
-#index-banner {
+#iowa-girls-code-camp-image {
   height : 100vh;
   background: url(../techchicks1.jpg);
   background-repeat: no-repeat;
@@ -129,8 +126,9 @@ span.title{
 }
 
 #gradient-section {
-  height: 100vh;
-  animation: move 10s ease infinite;
+  height : 100vh;
+  background-size: 200% 100% !important;
+  animation: move 3s ease infinite;
   transform: translate3d(0, 0, 0);
   background: linear-gradient(45deg, $theme-pink-opacite 10%, $theme-orange-opacite 90%);
 }
@@ -182,7 +180,7 @@ footer.page-footer {
     position: absolute;
     top: 40%;
   }
-  #index-banner .section {
+  #iowa-girls-code-camp-image .section {
     top: 10%;
   }
 }
@@ -205,7 +203,7 @@ footer.page-footer {
 }
 
 @media only screen and (max-width : 600px) {
-  #index-banner .section {
+  #iowa-girls-code-camp-image .section {
     top: 0;
   }
 }
