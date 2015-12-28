@@ -30,9 +30,6 @@ footer {
 }
 
 #schedule-container-wrapper > div > ul > li > p{
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
 }
 
 p {
@@ -61,12 +58,23 @@ span.title{
 }
 
 .container {
-    text-align: center;
+
 }
 
 .iowa-girls-code-camp-section {
+    display: none; /* for fadein animation */
     position: relative;
     top: 15%;
+}
+
+.navbar-fixed {
+    top: 100%;
+}
+
+.navbar-stuck-to-top {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 500;
 }
 
 .parallax-container, #iowa-girls-code-camp-image {
@@ -175,23 +183,27 @@ footer.page-footer {
   margin: 0;
 }
 
+
+/* Media Queries */
+
+/* Medium and down */
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
   }
   #iowa-girls-code-camp-image .section {
-    top: 10%;
+
   }
 }
-
-
-/* Media Queries */
 
 /* small only */
 @media only screen and (max-width: 600px) {
     #map {
         height: 300px;
+    }
+    #logo-container, body > nav > div > a.button-collapse > i{
+        font-size: 150%;
     }
 }
 
