@@ -7,6 +7,12 @@ $theme-orange: #FF9C65;
 $theme-orange-opacite: rgba(255, 156, 101, .85);
 $theme-blue: #89B9C7;
 
+/* Mixins */
+@mixin parallax-shadow() {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: white;
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -84,7 +90,7 @@ span.title{
 }
 
 .parallax-container, #iowa-girls-code-camp-image {
-  min-height: 380px;
+  min-height: 450px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -92,6 +98,10 @@ span.title{
 
 .parallax-container .section {
     width: 100%;
+}
+
+.parallax-container {
+    display: inline-flex;
 }
 
 .section-heading{
@@ -107,7 +117,7 @@ span.title{
 
 .section {
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 
 
@@ -130,6 +140,19 @@ span.title{
 
 #code-camp-description {
     font-weight: 300;
+}
+
+#code-camp-goal-parallax-text {
+  -webkit-text-shadow: 3px 3px 3px black;
+  -moz-text-shadow: 3px 3px 3px black;
+  text-shadow: 3px 3px 3px black;
+  color: white !important;
+  margin-bottom: 0;
+  margin-top: 15%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
 }
 
 #iowa-girls-code-camp-image {
@@ -159,14 +182,14 @@ span.title{
   text-shadow: 2px 2px 2px gray;
   color: white !important;
   margin-bottom: 0;
-  font-size: 600%;
+}
+
+#iowa-girls-code-camp {
+    font-size: 600%; /* TODO remove after inclusion of logo */
 }
 
 #map-column {
     padding: 0 0 0 0;
-}
-
-#map-container {
 }
 
 #schedule-container-wrapper{
@@ -180,6 +203,12 @@ span.title{
 #register-button, {
     background-color: $theme-blue !important;
 } 
+
+.parallax-shadow-wrapper {
+    @include parallax-shadow();
+    min-height: 450px;
+    text-align: center;
+}
 
 i {
     color : $theme-blue !important;
@@ -201,13 +230,7 @@ footer.page-footer {
 
 /* Medium and down */
 @media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #iowa-girls-code-camp-image .section {
 
-  }
 }
 
 /* small only */
@@ -221,6 +244,10 @@ footer.page-footer {
 
     .arrow-down-wrapper {
         bottom: 7%;
+    }
+
+    .parallax-container {
+    height: 200px;
     }
 }
 

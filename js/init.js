@@ -1,6 +1,31 @@
 var INITIAL_NAV_OFFSET = $("nav").offset().top;
+function fadeInCodeCampGoalParallaxSection() {
+	$("#code-camp-goal-parallax-text").fadeTo( 3000, 1, function() {
+     console.log("Animation complete.");
+  	});
+}
 
 (function($){
+
+/*
+	Creates the sticky nav effect when scrolling by the nav bar
+*/
+  function scrollingNavBar() {
+   var scrollPos = $(document).scrollTop();
+   	if (scrollPos > INITIAL_NAV_OFFSET) {  			
+   		if (!($("nav").hasClass("navbar-stuck-to-top")) ) {
+   			$("nav").addClass("navbar-stuck-to-top");
+   			$("#about-text").css("padding-top","5%");
+
+   		}
+   	} else {
+   		if ($("nav").hasClass("navbar-stuck-to-top")) {
+   			$("nav").removeClass("navbar-stuck-to-top");
+   			$("#about-text").css("padding-top","0%");
+   		}
+   	}
+}
+
   $(function(){
 
     $('.button-collapse').sideNav();
@@ -12,29 +37,13 @@ var INITIAL_NAV_OFFSET = $("nav").offset().top;
     	scrollingNavBar();
 	});
 
+	var options = [{selector: '#code-camp-goal-parallax', offset: 380, callback: 'fadeInCodeCampGoalParallaxSection()'},];
+  	Materialize.scrollFire(options);
 
+//#container-in-parallax
 
 
   }); // end of document ready
-
-/*
-	Creates the sticky nav effect when scrolling by the nav bar
-*/
-  function scrollingNavBar() {
-   var scrollPos = $(document).scrollTop();
-   	if (scrollPos > INITIAL_NAV_OFFSET) {  			
-   		if (!($("nav").hasClass("navbar-stuck-to-top")) ) {
-   			$("nav").addClass("navbar-stuck-to-top");
-   			$("#about-text").css("padding-top","10%");
-
-   		}
-   	} else {
-   		if ($("nav").hasClass("navbar-stuck-to-top")) {
-   			$("nav").removeClass("navbar-stuck-to-top");
-   			$("#about-text").css("padding-top","5%");
-   		}
-   	}
-}
 
 /* Smooth scrolling function */
 $(function() {
