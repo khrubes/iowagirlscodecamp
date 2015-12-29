@@ -1,0 +1,214 @@
+/* Mixins */
+nav ul a,
+nav .brand-logo {
+  color: #444; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto";
+  font-size: 14px; }
+
+footer {
+  background-color: #89B9C7 !important; }
+
+/* Nav bar link text on desktop */
+body > nav > div > ul.right.hide-on-med-and-down > li > a {
+  font-size: 120%; }
+
+p {
+  line-height: 2rem; }
+
+span.title {
+  font-weight: 500; }
+
+.arrow-down-wrapper {
+  position: absolute;
+  bottom: 15%;
+  text-align: center;
+  width: 100%; }
+
+.button-collapse {
+  color: #26a69a; }
+
+.circle {
+  background-color: white !important;
+  font-size: 250% !important;
+  border-radius: 0% !important; }
+
+.iowa-girls-code-camp-section {
+  display: none;
+  /* for fadein animation */
+  position: relative;
+  top: 15%; }
+
+.navbar-fixed {
+  top: 100%; }
+
+.navbar-stuck-to-top {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 500; }
+
+.nav-wrapper {
+  width: 90%; }
+
+.parallax-container, #iowa-girls-code-camp-image {
+  min-height: 450px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9); }
+
+.parallax-container .section {
+  width: 100%; }
+
+.parallax-container {
+  display: inline-flex; }
+
+.section-heading {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: white;
+  margin-top: 0px; }
+  .section-heading h1 {
+    margin-top: 0px; }
+
+.section {
+  padding-top: 5%;
+  padding-bottom: 10%; }
+
+#about-text, a.secondary-content {
+  color: #89B9C7 !important; }
+
+#map-container-wrapper, #schedule-container-wrapper, #faq-container-wrapper, #sponsors-container-wrapper {
+  background-color: #EC79A4;
+  display: -webkit-box !important; }
+
+#faq-container-wrapper {
+  background-color: white; }
+
+#sponsors-container-wrapper {
+  background-color: #89B9C7; }
+
+#code-camp-description {
+  font-weight: 300; }
+
+#code-camp-goal-parallax-text {
+  -webkit-text-shadow: 3px 3px 3px black;
+  -moz-text-shadow: 3px 3px 3px black;
+  text-shadow: 3px 3px 3px black;
+  color: white !important;
+  margin-bottom: 0;
+  margin-top: 15%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0; }
+
+#iowa-girls-code-camp-image {
+  height: 100vh;
+  background: url(../techchicks1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  opacity: 1; }
+
+#gradient-section {
+  height: 100vh;
+  background-size: 200% 100% !important;
+  animation: move 3s ease infinite;
+  transform: translate3d(0, 0, 0);
+  background: linear-gradient(45deg, rgba(236, 121, 164, 0.85) 10%, rgba(255, 156, 101, 0.85) 90%); }
+
+/* down arrow */
+#gradient-section > div.arrow-down-wrapper > i {
+  font-size: 400%; }
+
+#iowa-girls-code-camp {
+  -webkit-text-shadow: 2px 2px 2px gray;
+  -moz-text-shadow: 2px 2px 2px gray;
+  text-shadow: 2px 2px 2px gray;
+  color: white !important;
+  margin-bottom: 0; }
+
+#iowa-girls-code-camp {
+  font-size: 600%;
+  /* TODO remove after inclusion of logo */ }
+
+#map-column {
+  padding: 0 0 0 0; }
+
+#schedule-container-wrapper {
+  background-color: #FF9C65; }
+
+#map-row {
+  margin-bottom: 0px; }
+
+#register-button {
+  background-color: #89B9C7 !important; }
+
+.parallax-shadow-wrapper {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: white;
+  min-height: 450px;
+  text-align: center; }
+
+i {
+  color: #89B9C7 !important; }
+
+.icon-block {
+  padding: 0 15px; }
+
+.icon-block .material-icons {
+  font-size: inherit; }
+
+footer.page-footer {
+  margin: 0; }
+
+/* Media Queries */
+/* Medium and down */
+/* small only */
+@media only screen and (max-width: 600px) {
+  #map {
+    height: 300px; }
+
+  #logo-container, body > nav > div > a.button-collapse > i {
+    font-size: 150%; }
+
+  .arrow-down-wrapper {
+    bottom: 7%; }
+
+  .parallax-container {
+    height: 200px; } }
+/* medium and up */
+@media only screen and (min-width: 601px) {
+  #map {
+    height: 500px; } }
+@media only screen and (max-width: 600px) {
+  #iowa-girls-code-camp-image .section {
+    top: 0; } }
+/* Animations */
+@keyframes arrive {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 500px, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+@keyframes move {
+  0% {
+    background-position: 0 0; }
+  50% {
+    background-position: 100% 0; }
+  100% {
+    background-position: 0 0; } }
+
+/*# sourceMappingURL=style.css.map */
